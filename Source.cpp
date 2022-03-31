@@ -21,10 +21,10 @@ Spalinowy:Spalinowy* bmw;
 	std::cout << "--------------------------------------------------\n";
 Elektryczny:Elektryczny* tesla;
 	tesla = new Elektryczny;
-	tesla->set_rodzaj("sportowy");
+	tesla->set_rodzaj("miejski");
 	tesla->set_zasieg(20);
 	tesla->set_marka("tesla");
-	tesla->set_rocznik(1998);
+	tesla->set_rocznik(2020);
 	tesla->set_bateria("70%");
 	tesla->pokaz();
 
@@ -32,20 +32,25 @@ Elektryczny:Elektryczny* tesla;
 Hybryda:Hybryda* honda;
 	honda = new Hybryda;
 	
-	honda->set_rodzaj("sportowy");
+	honda->set_rodzaj("sedan");
 	honda->set_zasieg(20);
 	honda->set_marka("honda");
-	honda->set_rocznik(1998);
+	honda->set_rocznik(2018);
 	honda->set_bateria("98%");
 	honda->set_paliwo("gaz");
 	honda->pokaz();
 	std::cout << "--------------------------------------------------\n";
 	
 	
-	delete honda;
+	
 	delete tesla;
 	delete bmw;
 	delete porsche;
-	
+	std::cout << "--------------------------------------------------\n";
+	honda->uruchom();
+	honda->przyspiesz();
+	std::cout<<"stan hondy:\n" << *honda << "\n";
+	std::cout << "--------------------------------------------------\n";
+	delete honda;
 	return 0;
 }
